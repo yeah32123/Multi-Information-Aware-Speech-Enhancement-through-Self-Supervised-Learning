@@ -1,0 +1,42 @@
+// Discriminator Architecture
+digraph {
+	input [label=Input]
+	conv1_1 [label="Conv2d(256)"]
+	wscale1_1 [label=WScale]
+	leakyrelu1_1 [label=LeakyReLU]
+	conv1_2 [label="Conv2d(256)"]
+	wscale1_2 [label=WScale]
+	leakyrelu1_2 [label=LeakyReLU]
+	pool1 [label=AvgPool2d]
+	input -> conv1_1
+	conv1_1 -> wscale1_1
+	wscale1_1 -> leakyrelu1_1
+	leakyrelu1_1 -> conv1_2
+	conv1_2 -> wscale1_2
+	wscale1_2 -> leakyrelu1_2
+	leakyrelu1_2 -> pool1
+	{
+	}
+	conv2_1 [label="Conv2d(257)"]
+	wscale2_1 [label=WScale]
+	leakyrelu2_1 [label=LeakyReLU]
+	conv2_2 [label="Conv2d(256)"]
+	wscale2_2 [label=WScale]
+	leakyrelu2_2 [label=LeakyReLU]
+	conv2_3 [label="Conv2d(1)"]
+	wscale2_3 [label=WScale]
+	conv2_1 -> wscale2_1
+	wscale2_1 -> leakyrelu2_1
+	leakyrelu2_1 -> conv2_2
+	conv2_2 -> wscale2_2
+	wscale2_2 -> leakyrelu2_2
+	leakyrelu2_2 -> conv2_3
+	conv2_3 -> wscale2_3
+	{
+	}
+	stat [label=MinibatchStatConcat]
+	pool1 -> stat
+	stat -> conv2_1
+	output [label=Output]
+	wscale2_3 -> output
+}
