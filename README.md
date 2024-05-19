@@ -8,7 +8,28 @@ conda create --name <env> --file requirements.txt
 ```
 
 ## Dataset 
-待添加
+We use 2 standard datasets; 'UrbanSound8K'(for real-world noise samples), and 'Voice Bank + DEMAND'(for speech samples). Please download the datasets from urbansounddataset.weebly.com/urbansound8k.html and datashare.ed.ac.uk/handle/10283/2791 respectively. 
+To train a White noise denoising model, run the script:
+```
+python white_noise_dataset_generator.py
+```
+
+To train a UrbanSound noise class denoising model, run the script, and select the noise class:
+```
+python urban_sound_noise_dataset_generator.py
+
+0 : air_conditioner
+1 : car_horn
+2 : children_playing
+3 : dog_bark
+4 : drilling
+5 : engine_idling
+6 : gun_shot
+7 : jackhammer
+8 : siren
+9 : street_music
+```
+The train and test datasets for the specified noise will be generated in the 'Datasets' directory.
 
 ## Training a New Model
 待添加
