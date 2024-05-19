@@ -34,7 +34,7 @@ The train and test datasets for the specified noise will be generated in the 'Da
 ## Training
 You can choose the following three models for training: DCUnet10,DCUnet10_rTSTM and DCUnet10_cTSTM. DCUnet10 represents our speech denoising approach utilizing a complex U-Net architecture without a Time Step Transform Module (TSTM); DCUnet10_rTSTM represents our novel strategy with a real-valued TSTM (rTSTM) between the complex U-Net; DCUnet10_cTSTM represents our novel strategy with a complex-valued TSTM (cTSTM) between the complex U-Net. You can train the model by running the following script:
 ```
-python train.py
+python train_IDDP.py
 ```
 
 ## Special thanks to the following repositories:
