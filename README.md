@@ -41,10 +41,11 @@ python train.py
 * https://github.com/pheepa/DCUnet
 * https://github.com/ludlows/python-pesq
 * https://github.com/madhavmk/Noise2Noise-audio_denoising_without_clean_training_data
-* https://github.com/liqingchunnnn/Only-Noisy-Training/tree/main
+* https://github.com/liqingchunnnn/Only-Noisy-Training
 
 ## References
 [1] Abd  El-Fattah,   M.,  Dessouky,  M.I.,  Diab,  S.,  Abd  El-Samie,   F., 2008. Speech enhancement using an adaptive wiener filtering approach. Progress In Electromagnetics Research M 4, 167–184.
+
 [2]  Boll, S., 1979. Suppression of acoustic noise in speech using spectral sub- traction. IEEE Transactions on acoustics, speech, and signal processing 27, 113–120.
 [3]  Chen, X., He, K., 2021. Exploring simple siamese representation learn- ing, in:  Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pp. 15750–15758.
 [4]  Choi, H.S., Kim, J.H., Huh, J., Kim, A., Ha, J.W., Lee, K., 2019. Phase- aware speech enhancement with deep complex u-net, in:  International Conference on Learning Representations.
